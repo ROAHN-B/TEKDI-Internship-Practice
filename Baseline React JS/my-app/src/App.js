@@ -4,7 +4,8 @@ import TodoList from './component/todoList';
 import Profile from './component/profile';
 import  PackingList from './component/PackagingList';
 import List from './component/List';
-
+import React from 'react';
+import Student from './component/Student';
 
 
 function App(){
@@ -16,7 +17,7 @@ function App(){
       <Profile />
       <PackingList />
       <List />
-
+      <Student />
     </div>
   )
 } 
