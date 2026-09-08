@@ -1,7 +1,15 @@
-import React from "react";
+import React , { Component } from "react";
 
-const Student = () =>{
-    return <h1>Hello Rohan</h1>
+
+const Student = (props) =>{
+    return <h1>Hello {props.name}</h1>
 }
 
-export default Student;
+class Student1 extends Component{
+    render(){
+        return <h1>Hello {this.props.name}</h1>
+    }
+
+}
+
+export default Student1;

@@ -5,7 +5,7 @@ import Profile from './component/profile';
 import  PackingList from './component/PackagingList';
 import List from './component/List';
 import React from 'react';
-import Student from './component/Student';
+import Student1 from './component/Student';
 
 
 function App(){
@@ -17,7 +17,7 @@ function App(){
       <Profile />
       <PackingList />
       <List />
-      <Student />
+      <Student1 name = "Alice" />
     </div>
   )
 } 
