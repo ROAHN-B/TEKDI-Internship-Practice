@@ -9,11 +9,13 @@ import StateExp from './component/StateExp';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
-    <Student name="Rohan" roll="50" />
-    <StateExp />
+    <App  />
+    {/* <Student name="Rohan" roll="50" />
+    <StateExp /> */}
   </React.StrictMode>
 );
+
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

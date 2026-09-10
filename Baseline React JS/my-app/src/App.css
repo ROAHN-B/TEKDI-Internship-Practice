@@ -32,7 +32,20 @@
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(24, 161, 56, 0.1);
 }
-
+.EventHandler {
+  background-color: #cd2aaf;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(161, 9, 227, 0.1);
+  color:blue;
+}
+.FunctionalEventHandler {
+  background-color: #810f35;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(161, 9, 227, 0.1);
+  color:violet;
+}
 .App-link {
   color: #61dafb;
 }
