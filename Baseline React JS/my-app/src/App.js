@@ -11,9 +11,10 @@ import EventHandler from './component/EventHandler';
 import FunctionalEventHandler from './component/FunctionalEventHandler';
 import IfStatement from './component/IfStatement';
 import Guest from './component/guest';
-import React, { Component } from 'react';
+import React, { Component, useState , useEffect } from 'react';
 import LoginExp from './component/LoginExp';
 import ListExp from './component/ListExp';
+import useCustomHook from './component/CoutomHook';
 
 // function App(){
   
@@ -38,7 +39,7 @@ import ListExp from './component/ListExp';
 //   )
 // }
 
-export default class App extends Component{
+// export default class App extends Component{
  
     // const isRegistered = this.props.consumer;
     // if (isRegistered){
@@ -94,15 +95,63 @@ export default class App extends Component{
     //   )
     // }
 
-    render(){
-      const arr =this.props.numbers;
-      const newArr = arr.map((nums) => {
-        return <ListExp key={nums} value={nums} />
-      })
-      return (
-        <div>
-          {newArr}
-        </div>
-      )
-    }
+    // render(){
+    //   const arr =this.props.numbers;
+    //   const newArr = arr.map((nums) => {
+    //     return <ListExp key={nums} value={nums} />
+    //   })
+    //   return (
+    //     <div>
+    //       {newArr}
+    //     </div>
+    //   )
+    // }
+  // }
+
+  // function App(){
+  //   const [name,Setname]= useState("Rohan");
+  //   const [roll,Setroll] = useState("50");
+  //   const handleClick = () => {
+  //     Setname("Rohit");
+  //     Setroll("51");
+  //   };   
+  //   return <React.Fragment>
+  //     <h1>Name: {name}</h1>
+  //     <h1>Roll: {roll}</h1>
+  //     <button type="button" onClick={handleClick}>Change</button>
+  //   </React.Fragment>
+  // }
+
+  // function App(){
+  //   const [count,setCount] = useState(0);
+  //   const handleIncrement = () =>{
+  //     setCount(count+1);
+  //   }
+  //   const handleDecrement = () =>{
+  //     setCount(count-1);
+  //   }
+  //   useEffect(()=>{
+  //     console.log("Count Value is changed ");
+  //   },[count]);
+  //   return (
+  //     <React.Fragment>
+  //       <h1>Count up: {count}</h1>
+  //       <button type="button" onClick={handleIncrement}>Click</button>
+  //       <button type="button" onClick={handleDecrement}>Click</button>
+  //     </React.Fragment>
+  //   )
+  // }
+
+  function App (){
+    const data = useCustomHook();
+    return (
+      <React.Fragment>
+        <h1>
+          Count up: {data.count}
+        </h1>
+        <button type="button" onClick={data.HandleIncrement}>Increment</button>
+
+      </React.Fragment>
+    )
   }
+export default App;

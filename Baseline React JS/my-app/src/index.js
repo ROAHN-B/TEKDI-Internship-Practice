@@ -6,11 +6,11 @@ import reportWebVitals from './reportWebVitals';
 import Student from './Student';
 import StateExp from './component/StateExp';
 
-const arrValues = [10,20,30,40,50];
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App numbers={arrValues} />
+    <App  />
     {/* <Student name="Rohan" roll="50" />
     <StateExp /> */}
   </React.StrictMode>
