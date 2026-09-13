@@ -4,9 +4,13 @@ function useCustomHook(){
   const HandleIncrement =() => {
   setCount(count+1);
   };
+  const handleDecrement =() => {
+    setCount(count-1);
+  }
   return {
     count,
-    HandleIncrement
+    HandleIncrement,
+    handleDecrement
   };
 }
 

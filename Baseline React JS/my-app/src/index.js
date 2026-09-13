@@ -5,12 +5,16 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Student from './Student';
 import StateExp from './component/StateExp';
+import { Provider } from 'react-redux';
+import { store } from './app/store';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App  />
+    <Provider store={store}>
+      <App  />
+    </Provider>
     {/* <Student name="Rohan" roll="50" />
     <StateExp /> */}
   </React.StrictMode>

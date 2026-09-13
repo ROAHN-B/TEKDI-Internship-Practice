@@ -15,6 +15,7 @@ import React, { Component, useState , useEffect } from 'react';
 import LoginExp from './component/LoginExp';
 import ListExp from './component/ListExp';
 import useCustomHook from './component/CoutomHook';
+import NativeDatePicker from './component/NativeDatePicker';
 
 // function App(){
   
@@ -142,16 +143,18 @@ import useCustomHook from './component/CoutomHook';
   //   )
   // }
 
-  function App (){
-    const data = useCustomHook();
-    return (
-      <React.Fragment>
-        <h1>
-          Count up: {data.count}
-        </h1>
-        <button type="button" onClick={data.HandleIncrement}>Increment</button>
+  // function App (){
+  //   const data = useCustomHook();
+  //   return (
+  //     <React.Fragment>
+  //       <h1>Count: {data.count}</h1>
+  //       <button type="button" onClick={data.HandleIncrement}>Increment</button>
+  //       <button type="button" onClick={data.handleDecrement}>Decrement</button>
+  //     </React.Fragment>
+  //   )
+  // }
 
-      </React.Fragment>
-    )
+  function App(){
+    return (<NativeDatePicker />)
   }
 export default App;
