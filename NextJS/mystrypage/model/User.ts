@@ -35,6 +35,7 @@ const UserSchema:Schema<User>=new Schema ({
         trim:true,
         unique:true
     },
+    
     email:{
         type:String,
         required:[true,"Email is required!"],
@@ -63,7 +64,7 @@ const UserSchema:Schema<User>=new Schema ({
         default: true
     },
     messages:[MessageSchema]
-})
+},{ collection: 'UserDB' })
 
 const UserModel = (mongoose.models.User as mongoose.Model<User>) || mongoose.model<User>("User",UserSchema)
 
