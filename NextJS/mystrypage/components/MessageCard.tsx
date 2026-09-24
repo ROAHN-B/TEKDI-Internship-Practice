@@ -20,7 +20,7 @@ import {
 } from "@/components/ui/alert-dialog"
 import { Button } from "./ui/button"
 import { X } from "lucide-react"
-import { Message } from "react-hook-form"
+import { Message } from "@/model/User"
 import { useToast } from "@/hooks/use-toast"
 import axios from "axios"
 import { ApiResponse } from "@/Types/ApiResponse"
@@ -36,7 +36,7 @@ const MessageCard = ({ message, onMessageDelete }:MessageCardProps) => {
         toast({
             title: response.data.message
         })
-        onMessageDelete(message._id)
+        onMessageDelete(message._id.toString())
     }
 
     return (
