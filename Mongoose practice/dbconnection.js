@@ -1,7 +1,7 @@
 const mongoose = require("mongoose")
-const dbconnect = async()=>{
+async function  dbconnect(){
     try{
-        await mongoose.connect("mongodb+srv://rohanbelsare_db_user:Rohan123@mystrypage.ordiwq2.mongodb.net/")
+        await mongoose.connect("mongodb+srv://rohanbelsare_db_user:Rohan123@mystrypage.ordiwq2.mongodb.net/mongoose_practice")
         console.log("MongoDb connected");
     }
     catch (error){
@@ -10,6 +10,7 @@ const dbconnect = async()=>{
     };
 }
 
-export default  dbconnect();
+module.exports = dbconnect;
+dbconnect()
 
 
